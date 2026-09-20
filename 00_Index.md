@@ -8,6 +8,8 @@
 
 ## Основные разделы
 
+- [[01_Requirements/Release_2026_09_20_Autonomous_Run|Релиз 2026-09-20: автономный FRC run, authority и recovery]]
+
 - [[01_Requirements/Release_2026_09_20_Index|Релиз 2026-09-20: FRC-00/01/02 и runtime gates]]
 
 - [[Продуктовый_план_Fortis|Продуктовый план Fortis]]
@@ -73,3 +75,12 @@
 - [[03_Architecture/ADR-0016-runtime-backend-boundary|ADR-0016: FRC-01 — backend boundary, workspace/demo и recovery]]
 
 - [[03_Architecture/ADR-0017-enterprise-access-boundary|ADR-0017: enterprise membership, tenant isolation и browser identity]]
+
+- [[03_Architecture/ADR-0018-immutable-project-revisions|ADR-0018: immutable project revisions и атомарный audit]]
+- [[03_Architecture/ADR-0019-durable-demo-request-intake|ADR-0019: durable публичные заявки и публикационные gates]]
+
+- [[01_Requirements/Release_2026_09_20_Honest_Surface|FRC-11: позиционирование, capability и demo границы]]
+
+- [[03_Architecture/ADR-0020-canonical-versioned-cost|ADR-0020: точная стоимость сохранённой ревизии]]
+
+- [[03_Architecture/ADR-0021-catalog-provenance-private-documents|ADR-0021: происхождение каталога и приватные документы]]
