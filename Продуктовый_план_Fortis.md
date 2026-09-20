@@ -1,5 +1,14 @@
 # Продуктовый план Fortis: GIS MVP
 
+## Подготовка релизного baseline — 2026-09-20
+
+Согласовано выполнение только FRC-00 из parent `docs/fortis-release-specs/`:
+проверяемый комплект исходников, manifest и матрица доказательств. Исходные SHA,
+результаты и блокеры: [[01_Requirements/Release_2026_09_20_Index]].
+Это не приёмка продукта и не согласование новых контрактов остальных FRC.
+Исторические статусы ниже сохраняются как история; актуальные проверки ведутся
+в релизной матрице. Автоматического перехода к следующей спеке нет.
+
 **Дата актуализации:** 2026-07-30
 
 **Последнее обновление:** 2026-07-30 — default `/prototype` без `projectId` и demo-режима открывается как новый чистый проект с системным L0 от объекта защиты, onboarding создания L1 и явным размещением первого средства. Demo-данные и backend test variant не подмешиваются автоматически. Контракт зафиксирован в [[05_Design/Fortis_initial_state_and_first_echelon_2026-07-30]].
@@ -626,3 +635,15 @@ Fortis — это ГИС-конструктор защиты объекта от
 - JSON, экспортированный frontend, можно импортировать backend-ом и наоборот.
 
 **Следующие шаги (BE):** FRT-33 (библиотека средств), FRT-34 (детальные карточки), FRT-35 (документы), FRT-36 (стоимость/бюджет), FRT-37 (сравнение), FRT-38 (отчёт).
+
+
+### 2026-09-20 — FRC-01: локальная реализация runtime boundary
+
+Согласован и реализован [[03_Architecture/ADR-0016-runtime-backend-boundary|ADR-0016]]: единый backend resolver, explicit workspace/demo, отсутствие mock fallback, canonical enterprises, безопасное ручное сохранение/recovery, раздельные live/ready probes. Реализация поверх frontend 9feeb88, без изменения продуктового скоупа и методик. Подробные результаты и оставшиеся ошибки проверок: [отчёт FRC-01](../docs/releases/2026-09-20/frc01/implementation-report.md).
+
+FRC-00: Implemented / Acceptance blocked by runtime evidence. FRC-01: Implemented, локальные проверки выполнены, real-backend/runtime acceptance не подтверждена. Commit/push/deploy/migrations не выполнялись. FRC-02 не начат.
+
+
+### Уточнение access model FRC-02 — 2026-09-20
+
+Последующее согласование заменяет прежнее отсутствие resource authorization и разрешение обычным пользователям изменять общий каталог: [[03_Architecture/ADR-0017-enterprise-access-boundary|ADR-0017]]. Enterprise membership ограничивает projects, financial endpoints и private assets/documents; public catalog читается authenticated users, mutation/membership administration и enterprise create/delete — operator-only. Browser state/recovery изолированы по actual identity. FRC-02 реализован локальными рабочими изменениями; [проверки и production gates](../docs/releases/2026-09-20/frc02/implementation-report.md). Предшествующая запись «FRC-02 не начат» относится к завершению FRC-01. Full RBAC и дальнейшие FRC не реализуются этим изменением.

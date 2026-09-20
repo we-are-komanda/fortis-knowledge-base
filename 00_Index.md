@@ -8,6 +8,8 @@
 
 ## Основные разделы
 
+- [[01_Requirements/Release_2026_09_20_Index|Релиз 2026-09-20: FRC-00/01/02 и runtime gates]]
+
 - [[Продуктовый_план_Fortis|Продуктовый план Fortis]]
 - [[Fortis_Product_Brief_for_Design|Product Brief для дизайна]]
 - [[05_Design/Fortis_Studio_UI_Styleguide_2026-06-23|Fortis Studio UI Styleguide 2026-06-23]]
@@ -67,3 +69,7 @@
 - [[04_Process/Linear_FE_closing_workflow_2026-06-14|Linear FE closing workflow]]
 - [[04_Process/Frontend_develop_branch_policy_2026-06-14|Frontend develop branch policy]]
 - [[04_Process/Dev_VM_Deploy_2026-07-27|Dev VM deploy 2026-07-27]]
+
+- [[03_Architecture/ADR-0016-runtime-backend-boundary|ADR-0016: FRC-01 — backend boundary, workspace/demo и recovery]]
+
+- [[03_Architecture/ADR-0017-enterprise-access-boundary|ADR-0017: enterprise membership, tenant isolation и browser identity]]
