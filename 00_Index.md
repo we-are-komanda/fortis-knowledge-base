@@ -84,3 +84,4 @@
 - [[03_Architecture/ADR-0020-canonical-versioned-cost|ADR-0020: точная стоимость сохранённой ревизии]]
 
 - [[03_Architecture/ADR-0021-catalog-provenance-private-documents|ADR-0021: происхождение каталога и приватные документы]]
+- [[03_Architecture/ADR-0022-trusted-enterprise-provisioning|ADR-0022: trusted operator provisioning и первый workspace project]]

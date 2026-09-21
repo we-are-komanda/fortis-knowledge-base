@@ -68,3 +68,8 @@ Runtime-only blockers do not establish code PASS and do not automatically stop i
 ## FRC-06 принята локально — 2026-09-21
 
 **PASS для staged FRC-06.** Все30 пользовательских критериев PASS, SAVE01–08/10 PASS; SAVE09 N/A только при закрытой report capability до обязательной FRC10. Focused48/48, Chromium13/13, real Next→Go→disposablePG PASS; все7 review findings закрыты,8 probes PASS. Types/lint/build PASS,454 source hashes совпали. Full frontend250=201PASS/6 exact historical FAIL/43opt-inSKIP; новые failures отсутствуют. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`. Дальше FRC03 и отдельный real vertical gate. Production/reports не приняты. Actualproof: parent frc06/test-evidence и acceptance-criteria.
+
+
+## FRC-03 и отдельный vertical gate — 2026-09-21
+
+**PASS локального этапа.** Trusted CLI→Next→Go→disposable PostgreSQL: первое созданиеv1, редактирование эшелона, Savev2, неизменный ID/полный canonical GET после reload/relogin,121 строк пагинации, пустое E2, изоляция B. Console/page errors0. Browser29/29; full277=212PASS/6exacthistoricalFAIL/59SKIP; types/lint/buildPASS. Operator realCLI9/PG23 и independent review пройдены. Финальное исправление auth/logout проверено root; независимые агенты после этого недоступны по лимиту аккаунта. Evidence: docs/releases/2026-09-20/frc03/test-evidence.md и real-vertical/result.json. Production не принята. Далее07→08→10→13→14; без push/deploy.
