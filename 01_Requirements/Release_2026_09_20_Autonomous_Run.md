@@ -73,3 +73,8 @@ Runtime-only blockers do not establish code PASS and do not automatically stop i
 ## FRC-03 и отдельный vertical gate — 2026-09-21
 
 **PASS локального этапа.** Trusted CLI→Next→Go→disposable PostgreSQL: первое созданиеv1, редактирование эшелона, Savev2, неизменный ID/полный canonical GET после reload/relogin,121 строк пагинации, пустое E2, изоляция B. Console/page errors0. Browser29/29; full277=212PASS/6exacthistoricalFAIL/59SKIP; types/lint/buildPASS. Operator realCLI9/PG23 и independent review пройдены. Финальное исправление auth/logout проверено root; независимые агенты после этого недоступны по лимиту аккаунта. Evidence: docs/releases/2026-09-20/frc03/test-evidence.md и real-vertical/result.json. Production не принята. Далее07→08→10→13→14; без push/deploy.
+
+
+## FRC-07 — local acceptance,2026-09-21
+
+**PASS локального этапа.** Server-owned immutable budget, exact shared Commit gate, explicit pinned-source clone, unlimited import, lower-limit/non-increasing-overage semantics. BUD01–18 PASS under ADR-0023/user override. Actual Next→Go→disposablePG seven checkpoints PASS, originalv1→11/copyv1/importv1,0console/pageerrors. Frontend focused61/61; rendered56/56 including17budget; full314=232PASS/6exacthistoricalFAIL/76opt-inSKIP; full signatures6/6 unchanged. Types/lint/buildPASS with frozen manifest+lock Next16.2.11;420 source hashes verified. FullGo/build and realPG26top-level+20subcasesPASS. Independent review has no open findings. Pre13 stable deck layer.id RED→GREEN also recorded; FRC13 is not yet accepted. Evidence: docs/releases/2026-09-20/frc07/test-evidence.md. No new migrations, user5432/root/root2 mutations, push or deployment. Next08→10→13→14.
