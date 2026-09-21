@@ -1,5 +1,19 @@
 # Autonomous release-hardening — 2026-09-20
 
+## Возобновление autonomous run — 2026-09-21
+
+Новая инструкция пользователя отменяет прежнюю остановку и задаёт цепочку **FRC-06 → FRC-03 → vertical gate → FRC-07 → FRC-08 → FRC-10 → FRC-13 → FRC-14**. Опубликованные checkpoint commits frontend `045db0d` и parent `6bf246e` остаются в истории. На входе все четыре `develop` clean, fetch origin выполнен, divergence 0/0. Локальные commits разрешены по принятому этапу, сначала owning child, затем parent pointer; push/deployment/production mutations не разрешены.
+
+Уточнённые утверждённые контракты:
+
+- FRC-03: trusted local operator CLI через существующие runtime/DB и DDD conventions. Existing user, enterprise name/address, обязательные явные valid GIS coordinates, atomic enterprise+membership, rollback и отсутствие duplicate membership. Нет публичного admin/self-service endpoint, RBAC или ручного SQL как штатного workflow. Реальную пользовательскую local DB/root/root2 не менять ради UI; использовать disposable fixtures.
+- FRC-07: budget — server project authority. New/import unlimited; project JSON не источник budget. Copy только explicit trusted parameter из доступного server source, далее независимо. Limited updates сверх limit отклоняются HTTP422 `budget_exceeded`; если понижение budget создало overage, non-increasing/cost-reducing edits разрешены, cost-increasing запрещены. Exact minor money и unknown≠zero обязательны.
+- FRC-08 сравнивает явно идентифицированные saved server revisions. FRC-10 один immutable server snapshot для всех частей отчёта; hideCost удаляет finance на backend. Dirty выбор Save/last-saved обязателен при включении отчёта.
+- До FRC-13: stable `layer.id` в deck runtime identity, regression для одинаковых human codes; exact Next16.2.11 pin manifest+lock после подтверждения установленного lock/runtime и повторных проверок.
+- FRC-14: отсутствие deployed artifact/TLS/migration/rollback/backup/storage/scanner/retention/monitoring/SMTP/owners evidence означает **CODE PASS / RUNTIME ACCEPTANCE BLOCKED**, а не production PASS.
+
+FRC-06 evidence текущего продолжения: [implementation](../../docs/releases/2026-09-20/frc06/implementation-report.md), [test evidence](../../docs/releases/2026-09-20/frc06/test-evidence.md), [criteria](../../docs/releases/2026-09-20/frc06/acceptance-criteria.md), [review](../../docs/releases/2026-09-20/frc06/independent-review.md). Новые browser13/13 и focused48/48 проходят; реальный Next→Go→disposable PostgreSQL подтвердил save/recovery/conflict/copy reload. Final verification и итоговая stage acceptance фиксируются ниже/в checkpoint; до этого FRC-03 не начинается. SAVE-09 staged N/A при отключённой report capability, обязательное завершение в FRC-10; report не объявлен принятым.
+
 ## Authorization and current scope
 
 The user authorized autonomous local implementation of the remaining package FRC-03…FRC-14 after verification of FRC-02, with no repeated approval for ordinary engineering decisions. This supersedes historical task-level instructions to stop after FRC-00/01/02. It does not authorize push, deployment, production migrations, destructive changes or invented runtime evidence.
@@ -49,3 +63,8 @@ Runtime-only blockers do not establish code PASS and do not automatically stop i
 ## Публикация checkpoint по запросу пользователя — 2026-09-20
 
 После подготовки отчёта пользователь явно запросил коммит и push в develop всех репозиториев. Это разрешение на публикацию текущего промежуточного состояния, включая незавершённые FRC-03/06, а не приёмка релиза. Предпубликационная проверка: четыре origin/develop синхронизированы; backend go test ./... и frontend tsc --noEmit --incremental false прошли; FRC-06 повторно дал 4 PASS / 3 известных FAIL. Полный frontend suite и production evidence этим не заменяются. Локальные .env, JWT secret и backup базы исключены из Git. Предшествующие указания «коммитов/push не было» описывают состояние до этого запроса.
+
+
+## FRC-06 принята локально — 2026-09-21
+
+**PASS для staged FRC-06.** Все30 пользовательских критериев PASS, SAVE01–08/10 PASS; SAVE09 N/A только при закрытой report capability до обязательной FRC10. Focused48/48, Chromium13/13, real Next→Go→disposablePG PASS; все7 review findings закрыты,8 probes PASS. Types/lint/build PASS,454 source hashes совпали. Full frontend250=201PASS/6 exact historical FAIL/43opt-inSKIP; новые failures отсутствуют. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`. Дальше FRC03 и отдельный real vertical gate. Production/reports не приняты. Actualproof: parent frc06/test-evidence и acceptance-criteria.
