@@ -2,11 +2,25 @@
 
 ## Начать здесь
 
+- [[03_Architecture/ADR-0028-macos-demo|macOS Apple Silicon: установщик demo — 2026-10-27]]
+
+- [[03_Architecture/ADR-0027-windows-offline-demo|Windows-установщик автономного demo — 2026-10-26]]
+
+- [[04_Process/Локальный_запуск_Fortis|Единый локальный запуск: make dev]]
+
 - [[Welcome|Добро пожаловать]]
 - [[С чего начинаем]]
 - [[Ресурсы]]
 
 ## Основные разделы
+
+- [[03_Architecture/ADR-0025-synthetic-scenario-playback#Массовые прогоны — 2026-10-21|Массовые прогоны: кинематика, Монте-Карло, явные правила]]
+
+- [[03_Architecture/ADR-0025-synthetic-scenario-playback#Четыре Factory BIM в сценариях — 2026-10-21|Активная площадка сценариев: четыре Factory BIM, factory-campus@1]]
+
+- [[01_Requirements/Химическое_предприятие_состав_площадки_и_Meshy_2026-10-20|Химическое предприятие: состав внешней 3D-модели, карточки и каталог Meshy]]
+
+- [[01_Requirements/Концепция_сценарного_режима_2026-10-18|Учебные сценарии: концепция SCN-01; с 2026-10-19 основной вход без demo]]
 
 - [[01_Requirements/Release_2026_09_20_Autonomous_Run|Релиз 2026-09-20: автономный FRC run, authority и recovery]]
 
@@ -87,3 +101,9 @@
 - [[03_Architecture/ADR-0022-trusted-enterprise-provisioning|ADR-0022: trusted operator provisioning и первый workspace project]]
 - [[03_Architecture/ADR-0023-authoritative-project-budget|ADR-0023 — авторитетный бюджет проекта]]
 - [[03_Architecture/ADR-0024-pinned-saved-comparison|ADR-0024 — сравнение сохранённых ревизий]]
+
+- [[03_Architecture/ADR-0025-synthetic-scenario-playback|ADR-0025 — изолированное воспроизведение синтетических учебных сценариев]]
+
+## Обновление 2026-10-18: общий доступ
+
+По запросу пользователя вход и backend-разграничение доступа удалены; актуальное решение — [[ADR-0026-shared-workspace-without-auth]]. Demo/workspace capability gate сохранён.
