@@ -2,6 +2,14 @@
 
 ## Начать здесь
 
+- [[05_Design/Условные_знаки_средств_на_карте_2026-11-03|Условные тактические знаки средств на GIS-карте]]
+
+- [[03_Architecture/ADR-0030-yandex-basemap|Подложка Яндекс Карт — Tiles API]]
+
+- [[03_Architecture/ADR-0029-map-monte-carlo-shared-project|Карта → Монте-Карло: выбранный объект, общие размещения и масштаб 1:100]]
+
+- [[01_Requirements/Каталог_АО_ССТ_2026-11-03|Замена локальной библиотеки: шесть изделий АО «ССТ»]]
+
 - [[03_Architecture/ADR-0028-macos-demo|macOS Apple Silicon: установщик demo — 2026-10-27]]
 
 - [[03_Architecture/ADR-0027-windows-offline-demo|Windows-установщик автономного demo — 2026-10-26]]
