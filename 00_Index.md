@@ -2,6 +2,20 @@
 
 ## Начать здесь
 
+- [[03_Architecture/ADR-0033-game-unit-action-cycles|Игровые юниты: циклы атак, магазин, запас зарядов и перезарядка]]
+
+- [[03_Architecture/ADR-0032-monte-carlo-model-audit#Исправления игровой модели — 2026-11-05|Монте-Карло: исправления игровой модели и регрессионные проверки]]
+
+- [[05_Design/Условные_знаки_средств_на_карте_2026-11-03|Условные тактические знаки средств на GIS-карте]]
+
+- [[03_Architecture/ADR-0031-monte-carlo-equipment-effectiveness|ТТХ и позиции средств в Монте-Карло — mass-motion@4]]
+
+- [[03_Architecture/ADR-0030-yandex-basemap|Подложка Яндекс Карт — Tiles API]]
+
+- [[03_Architecture/ADR-0029-map-monte-carlo-shared-project|Карта → Монте-Карло: выбранный объект, общие размещения и масштаб 1:100]]
+
+- [[01_Requirements/Каталог_АО_ССТ_2026-11-03|Замена локальной библиотеки: шесть изделий АО «ССТ»]]
+
 - [[03_Architecture/ADR-0028-macos-demo|macOS Apple Silicon: установщик demo — 2026-10-27]]
 
 - [[03_Architecture/ADR-0027-windows-offline-demo|Windows-установщик автономного demo — 2026-10-26]]
